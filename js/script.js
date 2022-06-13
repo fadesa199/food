@@ -15,11 +15,20 @@ window.addEventListener('DOMContentLoaded', function () {
 
     tabs('.tabheader__item', '.tabcontent', '.tabheader__items', '.tabheader__item_active');
     modal('[data-modal]', '.modal', modalTimerId);
-    timer('.timer', '2022-06-15');
+    timer('.timer', '2022-10-10');
     cards();
     calc();
     forms('form', modalTimerId);
-    slider();
+    slider({
+        container: '.offer__slider',
+        nextArrow: '.offer__slider-next',
+        prevArrow: '.offer__slider-prev',
+        slide: '.offer__slide',
+        totalCounter: '#total',
+        currentCounter: '#current',
+        slidesWrapper: '.offer__slider-wrapper',
+        field: '.offer__slider-inner'
+    });
 
 });
 
